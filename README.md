@@ -1,3 +1,7 @@
+# Dig Deeper
+## Week 3
+### Jonathan Sullivan
+
 Mel told me that the melon delivery have been going fine but are deliverers have not been getting tipped properly. He want us to build a tip calculator. He said  for this app we need to build the following pages.
 
 1. Homepage
