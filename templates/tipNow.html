@@ -1,7 +1,9 @@
-{% extends "layout.html" %}
+{% extends "base.html" %}
 {%block content%}
-
-<span id="tip_amount"><span>
+<h1>Tip Now!</h1>
+<p>Confirm tip amount and hit send payment</p><br/>
+Tip Amount: <span id="tip_amount"><span>
+<form action="/tip/now" method="POST">
+    <input type="submit" value="Tip Now!">
+</form>
 {% endblock%}
-
-<!-- Do Not Modify below this line -->

@@ -1,2 +1,21 @@
-{% extends "layout.html" %}
-{%block content%}{% endblock%}
+{% extends "base.html" %}
+{%block content%}
+<h1>Select your Tippiabilty</h1>
+<h2>Cost: {{cost}}</h2>
+<table>
+    <tr>
+        <th>Percentage</th>
+        <th>Tip</th>
+        <th>Total</th>
+    </tr>
+    {% for tip in tips%}
+    
+    <tr>
+        <td>{{tip[0]}}</td>
+        <td>{{tip[1]}}</td>
+        <td>{{tip[1]+cost}}</td>
+        <td><form action="/tip/{{cost}}" method="POST"><input type="hidden" value="{{tip[1]}}" name="tip"><input type="submit" value="Tip Now!"></form></td>
+    </tr>
+    {% endfor%}
+</table>
+{% endblock%}

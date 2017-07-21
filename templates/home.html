@@ -1,2 +1,13 @@
-{% extends "layout.html" %}
-{%block content%}{% endblock%}
+{% extends "base.html" %}
+{%block content%}
+<H1>UberMelonTipper</H1>
+<img src="https://lh3.ggpht.com/yTce5ki0kpVq6COviGGVsCKPMxUpPvjO_5ArHG6fVA2Awba6M-7aR8GVRaPib6TsoA=w300-rw">
+<br/>
+{% if session.email %}
+<a href="/cost"><button>Get Started</button></a>
+{% endif %}
+
+{% if not session.email %}
+<a href="/login"><button>Login</button></a>
+{% endif %}
+{% endblock%}

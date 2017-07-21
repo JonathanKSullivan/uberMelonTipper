@@ -1,2 +1,10 @@
-{% extends "layout.html" %}
-{%block content%}{% endblock%}
+{% extends "base.html" %}
+{%block content%}
+<h1>Cost</h1>
+<form action="/cost" method="POST">
+    <label for="cost" >Enter the cost of your order</label>
+    <input id="cost" name="cost" type="number" min="0" step="any">
+    <input type="submit" value="Calculate Tip">
+</form>
+
+{% endblock%}

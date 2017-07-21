@@ -8,7 +8,7 @@ def tip(cost, percent):
     5.0
 
     """
-    pass
+    return (percent/100.0) * cost
 
 def tips(cost, percents):
     """ Returns a list of tip amounts given a list of percentage and one cost
@@ -17,16 +17,16 @@ def tips(cost, percents):
     [5.0 25.0, 10.0]
 
     """
-    pass
+    return [tip(cost, percent) for percent in percents]
 
 import unittest
-class tipTestCases(unittest.Testcase):
+class tipTestCases(unittest.TestCase):
     """docstring for ClassName"""
 
-    def test_tip(self, arg):
+    def test_tip(self):
         self.assertEqual(tip(100, 25), 25)
     
-    def test_tips(self, arg):
+    def test_tips(self):
         self.assertEqual(tips(100, [5, 10, 15, 20]), [5, 10, 15, 20])
 
 if __name__ == "__main__":

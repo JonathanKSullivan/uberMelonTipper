@@ -1,5 +1,4 @@
-(document.getElementById('tip_amount').innerHTML=listCookies()
-function listCookies() {
-    var theCookie = document.cookie.split(';')[0];
-    return theCookie;
-})()
+// Do Not Modify below this line
+alert("Here Johnny")
+$('#tip_amount').text(document.cookie.split(';')[0].split('=')[1]);
+
